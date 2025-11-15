@@ -29,7 +29,7 @@ export default defineConfig({
     }
   },
   // Fix for MIME type issues in deployment
-  base: './',
+  base: '/',
   // Ensure proper MIME types for JS modules
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
