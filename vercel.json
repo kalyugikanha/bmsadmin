@@ -2,12 +2,18 @@
   "version": 2,
   "buildCommand": "npm ci --prefer-offline && npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "^/assets/(.*)$",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "^/(.+\\.[^/]+)$",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/(.*)$",
+      "dest": "/index.html"
     }
   ]
 }
