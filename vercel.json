@@ -13,7 +13,11 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/(?!assets/|public/|.*\\.js$|.*\\.css$|.*\\.json$|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.ico$)(.*)",
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/:path((?!assets).*)*",
       "destination": "/index.html"
     }
   ]
